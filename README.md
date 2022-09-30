@@ -57,6 +57,9 @@ The above example shows the "d" )(directory) or "-" (file) indicator, Unix file 
 
 `mkdir new_result` Create a new directory, named new_result.
 
+**Create a empty file**
+`touch test.txt` Create a emtpy file, named as test.txt.
+
 ## To use Conda
 ## Install packages viv Conda
 ## bcl2fastq
