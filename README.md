@@ -1,67 +1,45 @@
 # Illumina-data-toolset
-## Basic Unin/Lunix commands
-**Change directory**
+## HPC command
+For HPC user, once you login via login node. The first command is to enter compute node. 
 
-`cd ..` Change to parent directory.
+`srun --pty bash`
 
-`cd ~` Change to home directory.
+## Basic Bash commands
 
-`cd /` Change to root directory.
-
-`cd /user/abc` Change to `/user/abc` directory. This is absolute path, start from root.
-
-`cd ../efg` Change to parent directory and enter `efg/` directory.
-
-**Print working directory**
-
-Type `pwd` ,then return `/home/ychen` on your screen. This is the command where you are. 
-
-**Print list**
-
-`ls` Print files in the current director. This is the command telling you what we have in the current director.
-
-`ls -a` Print all files including hiden files.
-
-`ls -l` Print files in long format. e.g.
-```
-$ ls -l
-drwxr--r--   1 fjones editors     4096 Mar  2 12:52  drafts
--rw-r--r--   3 fjones editors    30405 Mar  2 12:52  edition-32
--r-xr-xr-x   1 fjones bookkeepers 8460 Jan 16  2022  edit.sh
-```
-The above example shows the "d" )(directory) or "-" (file) indicator, Unix file permission notation (R for read, W for write, X for execition), number of Hard_links (1 or 3). In the working directory the owner fjones has a directory named drafts, a regular file named edition-32, and an old executable named edit.sh
-
-`ls -t -l` or `ls -lt` Print files in long format, sort the list by modification time.
-
-**Copy file or directory**
-
-`cp /home/ychen/abc.txt /home/achen/` Copy files from sourece (/home/ychen/abc.txt) to destination (/home/achen/).
-
-`cp /home/ychen/zzz /home/achen/` Copy direcotry from sourece (/home/ychen/zzz) to destination (/home/achen/).
-
-**Move/Rename file**
-
-`mv /home/ychen/abc.txt /home/achen/` Move files (or directory) from sourece to destination.
-
-`mv /home/ychen/abc.txt /home/ychen/zzz.txt` Change file name from abc.txt to zzz.txt.
-
-**Remove file or directory** (***USE WITH CAUTION. IT CAN'T UNDO***. No recycle bin. Gone is gone.)
-
-`rm abc.txt` Remove a file, abc.txt
-
-`rm abc.txt def.pdf zzz.png` Remove multiple files.
-
-`rm -r <directory>` Remove a directory.
-
-**Make new directory**
-
-`mkdir new_result` Create a new directory, named new_result.
-
-**Create a empty file**
-`touch test.txt` Create a emtpy file, named as test.txt.
+- [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
 
 ## To use Conda
-## Install packages viv Conda
+
+- Introduction (use Python as example) [Anaconda (Conda) for Python - What & Why?](https://www.youtube.com/watch?v=23aQdrS58e0)
+
+- [Conda command cheatsheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
+
+1. Download the installer:
+
+    [Miniconda installer for macOS.](https://docs.conda.io/en/latest/miniconda.html)
+2. Install:
+
+    `bash Miniconda3-latest-MacOSX-x86_64.sh`
+    
+3. Follow the prompts on the installer screens.
+4. To make the changes take effect, close and then re-open your terminal window.
+5. Build a environment with pyhton3.
+
+    `conda create --name my_env python=3`
+
+6. Activate enviroment.
+
+    `conda activate my_env`
+    
+You will see your prefix change from base to my_env on the screen of terminal
+
+```
+(base) mymacbook:~ user$ conda activate my_env
+(my_env) mymacbook:~ user$ 
+```
+This indicates your are in the my_env environment. You have to activate environment in each time of login.
+
+## Install packages in Conda environment
 ## bcl2fastq
 ## Illumina run metrics
 ## fastqc
