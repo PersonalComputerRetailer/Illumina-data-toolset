@@ -1,0 +1,9 @@
+channels:
+ - bioconda
+ - dranew
+dependencies:
+ - samtools=1.13
+ - bcl2fastq
+ - fastqc
+ - multiqc
+ - illumina-interop

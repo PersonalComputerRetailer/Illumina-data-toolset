@@ -23,9 +23,9 @@ For HPC user, once you login via login node. The first command is to enter compu
     
 3. Follow the prompts on the installer screens.
 4. To make the changes take effect, close and then re-open your terminal window.
-5. Build a environment with pyhton3.
+5. Build a environment, named my_env, with a yaml file, which tells what packages need to be installed.
 
-    `conda create --name my_env python=3`
+    `conda env create --name my_env --file my_pkg.yaml`
 
 6. Activate enviroment.
 
@@ -39,7 +39,6 @@ You will see your prefix change from base to my_env on the screen of terminal
 ```
 This indicates your are in the my_env environment. You have to activate environment in each time of login.
 
-## Install packages in Conda environment
 ## bcl2fastq
 ## Illumina run metrics
 ## fastqc
